@@ -18,9 +18,11 @@ public class BreadthFirstTraversal {
 		root.right.left = new TreeNode<Integer>(15);
 		root.right.right = new TreeNode<Integer>(8);
 		
+		traverseBFS(root);
+		System.out.println();
 		traverseBFS1(root);
 	}
-	
+
 	public static <E> void traverseBFS(TreeNode<E> root) {
 		Queue<TreeNode<E>> queue = new LinkedList<>();
 		queue.add(root);

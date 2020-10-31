@@ -43,7 +43,7 @@ class LinkedList<E> {
 				isPalindrome = false;
 				break;
 			}
-			slow = slow.next;
+			slow = slow.next; 
 		}
 		
 		return isPalindrome;
@@ -340,7 +340,7 @@ class LinkedList<E> {
 			return;
 		}
 		Node<E> node = head;
-		//reach up to last node
+		//reach up to second last node
 		while(node.next != null && node.next.next != null) {
 			node = node.next;
 		}
