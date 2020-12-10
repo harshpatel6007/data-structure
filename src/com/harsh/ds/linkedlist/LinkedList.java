@@ -385,4 +385,17 @@ class LinkedList<E> {
 		
 		head = prev;
 	}
+	
+	@Override
+	public String toString() {
+		StringBuilder builder = new StringBuilder();
+		Node<E> node = head;
+		while(node.next != null) {
+			builder.append(node.getValue());
+			builder.append(", ");
+			node = node.next;
+		}
+		builder.append(node.getValue());
+		return builder.toString();
+	}
 }

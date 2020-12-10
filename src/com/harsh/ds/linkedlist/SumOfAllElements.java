@@ -17,8 +17,19 @@ public class SumOfAllElements {
 		
 		System.out.println(getSumOfAllElements(list.getHead()));
 		System.out.println(getOddEvenSumOfAllElements(list.getHead(), true));
+		System.out.println(getOddEvenSumOfAllElements2(list.getHead(), true));
 	}
 
+	private static int getOddEvenSumOfAllElements2(Node<Integer> head, boolean flag) {
+		if(head == null) {
+			return 0;
+		}
+		
+		int currentValue = flag ? head.getValue() : -1 * head.getValue();
+		return currentValue + getOddEvenSumOfAllElements2(head.next, !flag);
+	}
+	
+	
 	private static int getOddEvenSumOfAllElements(Node<Integer> head, boolean flag) {
 		if(head == null) {
 			return 0;
